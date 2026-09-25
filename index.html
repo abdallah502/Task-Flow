@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>TaskFlow</h1>
+        <p class="subtitle">A simple task manager</p>
+
+        <section class="task-form">
+            <input id="taskInput" type="text" placeholder="Enter a task..." maxlength="100">
+
+            <select id="category">
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+            </select>
+
+            <button id="addButton">Add Task</button>
+        </section>
+
+        <section class="stats">
+            <span id="totalCount">Total: 0</span>
+            <span id="activeCount">Active: 0</span>
+            <span id="completedCount">Completed: 0</span>
+        </section>
+
+        <input id="searchInput" class="search" type="text"
+               placeholder="Search tasks...">
+
+        <div class="filters">
+            <button class="filter active-filter" data-filter="all">All</button>
+            <button class="filter" data-filter="active">Active</button>
+            <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage">No tasks found.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
