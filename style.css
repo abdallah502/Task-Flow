@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+.container {
+    width: 92%;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-top: 8px;
+}
+
+.task-form {
+    display: grid;
+    grid-template-columns: 1fr 130px 110px;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+input,
+select,
+button {
+    font-size: 15px;
+}
+
+input,
+select {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 11px 14px;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.search {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.filter {
+    background: #ddd;
+    color: #222;
+}
+
+.active-filter {
+    background: #222;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 13px;
+    margin-bottom: 10px;
+    background: #f1f1f1;
+    border-radius: 7px;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-text {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.category {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+.edit {
+    background: #555;
+}
+
+.delete {
+    background: #b83232;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #888;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .task-form {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    li {
+        align-items: flex-start;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}
